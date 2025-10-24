@@ -1,12 +1,15 @@
 import React from 'react';
 import { Banner } from './components/banner/banner';
 import { NavigationMenuComponent } from './components/banner/nav';
+import { CarouselSpacing } from './components/banner/carousel';
+import { clsx } from 'clsx';
 
 function App() {
   return (
-   <div className="pt-4 bg-slate-700">
-     <NavigationMenuComponent />
+   <div className="bg-gradient-to-l from-slate-700 to-slate-900">
+     <NavigationMenuComponent  />
      <Banner />
+     <CarouselSpacing />
    </div>
   );
 }

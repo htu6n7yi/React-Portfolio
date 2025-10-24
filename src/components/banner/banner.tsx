@@ -8,6 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button, buttonVariants } from "../ui/button";
+import image from "/src/assets/gemini.png";
 
 export function Banner() {
   return (
@@ -35,8 +36,8 @@ export function Banner() {
 
       <Card className="max-h-80 bg-slate-800 border-slate-600">
         <img
-          className="object-cover w-full h-full"
-          src="https://thvnext.bing.com/th/id/OIP.68xL3uMB62-YYrAfPwVPPAHaEb?w=265&h=180&c=7&r=0&o=7&cb=12&pid=1.7&rm=3&ucfimg=1"
+          className="object-cover w-auto h-full"
+          src={image}
           alt=""
         />
       </Card>
