@@ -1,16 +1,18 @@
-import React from 'react';
-import { Banner } from './components/banner/banner';
-import { NavigationMenuComponent } from './components/banner/nav';
-import { CarouselSpacing } from './components/banner/carousel';
-import { clsx } from 'clsx';
+import React from "react";
+import { Banner } from "./components/banner/banner";
+import { NavigationMenuComponent } from "./components/banner/nav";
+import { CarouselSpacing } from "./components/banner/carousel";
+import { clsx } from "clsx";
 
 function App() {
   return (
-   <div className="bg-gradient-to-l from-slate-700 to-slate-900">
-     <NavigationMenuComponent  />
-     <Banner />
-     <CarouselSpacing />
-   </div>
+    <div className="bg-gradient-to-l from-slate-700 to-slate-900 min-h-screen h-full flex flex-col justify-between">
+      <NavigationMenuComponent />
+      <main>
+        <Banner />
+      </main>
+      <CarouselSpacing />
+    </div>
   );
 }
 
