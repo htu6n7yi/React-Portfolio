@@ -1,12 +1,9 @@
-import * as React from "react";
 
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 import { SiCss3, SiHtml5, SiJavascript, SiReact, SiTailwindcss, SiTypescript, SiNextdotjs, SiAngular, SiMysql, SiPython} from "react-icons/si";
 import { DiJava } from "react-icons/di";

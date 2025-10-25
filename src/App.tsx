@@ -1,8 +1,6 @@
-import React from "react";
 import { Banner } from "./components/banner/banner";
 import { NavigationMenuComponent } from "./components/banner/nav";
 import { CarouselSpacing } from "./components/banner/carousel";
-import { clsx } from "clsx";
 
 function App() {
   return (

@@ -1,13 +1,10 @@
 import {
   Card,
-  CardAction,
-  CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Button, buttonVariants } from "../ui/button";
+import { Button} from "../ui/button";
 import image from "/src/assets/gemini.png";
 
 export function Banner() {

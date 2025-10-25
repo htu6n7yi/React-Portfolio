@@ -3,7 +3,6 @@ import {
   NavigationMenuList,
   NavigationMenuItem,
   NavigationMenuTrigger,
-  NavigationMenuContent,
 } from "@radix-ui/react-navigation-menu";
 
 export function NavigationMenuComponent() {
