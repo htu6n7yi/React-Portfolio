@@ -4,7 +4,7 @@ import { CarouselSpacing } from "./components/banner/carousel";
 
 function App() {
   return (
-    <div className="bg-gradient-to-l from-slate-700 to-slate-900 min-h-screen h-full flex flex-col justify-between">
+    <div className="bg-gradient-to-l from-slate-700 to-slate-900 flex flex-col justify-between">
       <NavigationMenuComponent />
       <main>
         <Banner />

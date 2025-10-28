@@ -1,57 +1,90 @@
+import Autoplay from "embla-carousel-autoplay";
 
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  // Não precisamos dos hooks aqui, apenas dos componentes
 } from "@/components/ui/carousel";
-import { SiCss3, SiHtml5, SiJavascript, SiReact, SiTailwindcss, SiTypescript, SiNextdotjs, SiAngular, SiMysql, SiPython} from "react-icons/si";
+
+import {
+  SiCss3,
+  SiHtml5,
+  SiJavascript,
+  SiReact,
+  SiTailwindcss,
+  SiTypescript,
+  SiNextdotjs,
+  SiAngular,
+  SiMysql,
+  SiPython,
+} from "react-icons/si";
 import { DiJava } from "react-icons/di";
+
+// Vamos criar um array para os ícones, tornando o código mais limpo (opcional, mas recomendado)
+const technologies = [
+  { icon: SiTypescript, color: "#3178C6", name: "TypeScript" },
+  { icon: SiTailwindcss, color: "#38B2AC", name: "Tailwind" },
+  { icon: SiReact, color: "#61DAFB", name: "React" },
+  { icon: SiJavascript, color: "#F7DF1E", name: "JavaScript" },
+  { icon: SiHtml5, color: "#E34F26", name: "HTML5" },
+  { icon: SiCss3, color: "#1572B6", name: "CSS3" },
+  { icon: SiNextdotjs, color: "#000000", name: "Next.js" },
+  { icon: SiAngular, color: "#DD1B16", name: "Angular" },
+  { icon: DiJava, color: "#007396", name: "Java" },
+  { icon: SiMysql, color: "#4479A1", name: "MySQL" },
+  { icon: SiPython, color: "#3776AB", name: "Python" },
+];
 
 export function CarouselSpacing() {
   return (
     <div className="w-full">
-      <Carousel className="">
-        <CarouselContent className="-ml-1 max-h-40">
-          <CarouselItem className="w-full p-4 flex flex-row ">
-            <Card className="shadow-sky-600">
-              <CardContent className="flex flex-col items-center"> <SiTypescript size={25} color="#3178C6"/> TypeScript </CardContent>
-            </Card>
-            <Card className="shadow-sky-600">
-              <CardContent className="flex flex-col items-center"> <SiTailwindcss size={25} color="#38B2AC"/> Tailwind </CardContent>
-            </Card>
-            <Card className="shadow-sky-600">
-              <CardContent className="flex flex-col items-center"> <SiReact size={25} color="#61DAFB"/> React </CardContent>
-            </Card>
-            <Card className="shadow-sky-600">
-              <CardContent className="flex flex-col items-center"> <SiJavascript size={25} color="#F7DF1E"/> JavaScript </CardContent>
-            </Card>
-            <Card className="shadow-sky-600">
-              <CardContent className="flex flex-col items-center"> <SiHtml5 size={25} color="#E34F26"/> HTML5 </CardContent>
-            </Card>
-            <Card className="shadow-sky-600">
-              <CardContent className="flex flex-col items-center"> <SiCss3 size={25} color="#1572B6"/> CSS3 </CardContent>
-            </Card>
-            <Card className="shadow-sky-600">
-              <CardContent className="flex flex-col items-center"> <SiNextdotjs size={25} color="#000000"/> Next.js </CardContent>
-            </Card>
-            <Card className="shadow-sky-600">
-              <CardContent className="flex flex-col items-center"> <SiAngular size={25} color="#DD1B16"/> Angular </CardContent>
-            </Card>
-            <Card className="shadow-sky-600">
-              <CardContent className="flex flex-col items-center"> <DiJava size={25} color="#007396"/> Java </CardContent>
-            </Card>
-            <Card className="shadow-sky-600">
-              <CardContent className="flex flex-col items-center"> <SiMysql size={25} color="#4479A1"/> MySQL </CardContent>
-            </Card>
-            <Card className="shadow-sky-600">
-              <CardContent className="flex flex-col items-center"> <SiPython size={25} color="#3776AB"/> Python </CardContent>
-            </Card>
-          </CarouselItem>
+      {/* PASSO 1: Adicionar o plugin de Autoplay e a opção 'loop: true'.
+        - 'plugins' ativa a rolagem automática.
+        - 'opts={{ loop: true }}' faz o carrossel voltar ao início após o último item.
+      */}
+      <Carousel
+        className=""
+        opts={{
+          loop: true,
+          align: "start",
+        }}
+        plugins={[
+          Autoplay({
+            delay: 2000, // Tempo em milissegundos (2 segundos)
+            stopOnInteraction: false, // Continua tocando mesmo após interação manual
+          }),
+        ]}
+      >
+      
+        <CarouselContent className="-ml-1 ">
+          {technologies.map((tech, index) => {
+            const IconComponent = tech.icon;
+            return (
+              <div className="flex flex-wrap ">
+                <CarouselItem
+                  key={index}
+                  className="p-4 "
+                >
+                  <Card className="shadow-sky-600">
+                    <CardContent className="flex flex-col items-center justify-center ">
+                      <IconComponent size={25} color={tech.color} />
+                      <span className="text-sm">{tech.name}</span>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              </div>
+            );
+          })}
         </CarouselContent>
-        <footer >
-        <p className="text-center text-white">© 2025 José Carlos Cavalcanti</p>
-      </footer>
+
+        {/* O footer deve ficar fora do CarouselContent */}
+        <footer className="mt-4">
+          <p className="text-center text-white">
+            © 2025 José Carlos Cavalcanti
+          </p>
+        </footer>
       </Carousel>
     </div>
   );
