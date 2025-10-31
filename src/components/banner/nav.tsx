@@ -27,6 +27,7 @@ export function NavigationMenuComponent() {
     
   // Lista de links para evitar repetição (boa prática!)
   const navLinks = [
+    { label: "Início", href: "#inicio" },
     { label: "Projetos", href: "#projetos" },
     { label: "Sobre", href: "#sobre" },
     { label: "Contato", href: "#contato" },
@@ -60,7 +61,7 @@ export function NavigationMenuComponent() {
                                     {link.label}
                                 </a>
                             </NavigationMenuItem>
-                            {/* Adiciona o separador "|" apenas entre os itens */}
+                            {/* Adiciona o separador "|" apenas entre os items */}
                             {index < navLinks.length - 1 && (
                                 <span className="text-gray-500">|</span>
                             )}
