@@ -7,13 +7,16 @@ import {
 import { Button } from "../ui/button";
 import image from "/src/assets/gemini.png";
 
-// 1. Definimos uma interface para tipar as props que o Banner vai receber
-interface BannerProps {
-  onShowProjectsClick: () => void; // Informa que esperamos uma função
-}
+// 1. Importe o 'Link'
+import { Link } from "react-router-dom";
 
-// 2. Recebemos a prop 'onShowProjectsClick' aqui
-export function Banner({ onShowProjectsClick }: BannerProps) {
+// 2. NÃO PRECISA MAIS DAS PROPS
+// interface BannerProps {
+//   onShowProjectsClick: () => void;
+// }
+// export function Banner({ onShowProjectsClick }: BannerProps) {
+
+export function Banner() {
   return (
     <div className="p-4 text-amber-100 flex flex-col ">
       <div className="mt-4">
@@ -38,16 +41,19 @@ export function Banner({ onShowProjectsClick }: BannerProps) {
               >
                 Saiba Mais
               </Button>
-              <Button
-                variant={"default"}
-                className="mt-4 w-4/6 bg-slate-500/20 hover:bg-slate-700/20 
-           border-blue-600 border 
-          "
-                // 3. Usamos a função recebida pela prop no evento onClick
-                onClick={onShowProjectsClick}
-              >
-                Ver Projetos
-              </Button>
+
+              {/* 3. Envolva seu botão com o <Link> */}
+              <Link to="/projetos">
+                <Button
+                  variant={"default"}
+                  className="mt-4 w-4/6 bg-slate-500/20 hover:bg-slate-700/20 
+             border-blue-600 border 
+            "
+                  // NÃO PRECISA MAIS: onClick={onShowProjectsClick}
+                >
+                  Ver Projetos
+                </Button>
+              </Link>
             </div>
           </CardHeader>
         </Card>
