@@ -29,6 +29,18 @@ const Projetos = () => {
       deploy: "github.com",
       repositorio: "#",
     },
+    {
+      title: "Projeto 3",
+      description: "Descrição do Projeto 3",
+      deploy: "github.com",
+      repositorio: "#",
+    },
+    {
+      title: "Projeto 3",
+      description: "Descrição do Projeto 3",
+      deploy: "github.com",
+      repositorio: "#",
+    },
   ];
 
   return (
@@ -38,7 +50,7 @@ const Projetos = () => {
         {dataProjetos.map((p) => (
           <Card
             key={p.title}
-            className="p-4 min-h-35 gap-0 flex justify-between"
+            className="p-4 min-h-45 gap-0 flex justify-between"
           >
             <CardHeader>
               <CardTitle>{p.title}</CardTitle>
@@ -49,8 +61,8 @@ const Projetos = () => {
             <CardFooter>
               <CardAction>
                 <a href={p.deploy} className="flex flex-row gap-2">
-                  <SiGithub size={35} className="border rounded border-blue-400 p-1"/> 
-                  <SiRocket size={35} className="border rounded border-blue-400 p-1" />
+                  <SiGithub size={35} className="border-b border-r rounded border-blue-400 p-1"/> 
+                  <SiRocket size={35} className="border-b border-r rounded border-blue-400 p-1" />
                 </a>
               </CardAction>
             </CardFooter>

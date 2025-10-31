@@ -65,7 +65,7 @@ export function CarouselSpacing() {
               <div className="flex flex-wrap ">
                 <CarouselItem
                   key={index}
-                  className="p-4 "
+                  className="p-3"
                 >
                   <Card className="shadow-sky-600">
                     <CardContent className="flex flex-col items-center justify-center ">
