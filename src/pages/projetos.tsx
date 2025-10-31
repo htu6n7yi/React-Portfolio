@@ -7,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { SiGithub, SiRocket } from "react-icons/si";
 
 const Projetos = () => {
   const dataProjetos = [
@@ -47,7 +48,10 @@ const Projetos = () => {
             </CardContent>
             <CardFooter>
               <CardAction>
-                Deploy: <a href={p.deploy}>🚄</a>
+                <a href={p.deploy} className="flex flex-row gap-2">
+                  <SiGithub size={35} className="border rounded border-blue-400 p-1"/> 
+                  <SiRocket size={35} className="border rounded border-blue-400 p-1" />
+                </a>
               </CardAction>
             </CardFooter>
           </Card>

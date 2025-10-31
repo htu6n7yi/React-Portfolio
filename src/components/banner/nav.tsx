@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+// 1. Importe o 'Link' do react-router-dom
+import { Link } from 'react-router-dom';
 import {
   NavigationMenu,
   NavigationMenuList,
@@ -25,12 +27,13 @@ export function NavigationMenuComponent() {
     setIsMenuOpen(!isMenuOpen);
   };
     
-  // Lista de links para evitar repetição (boa prática!)
+  // 2. MODIFICADO: Lista de links para usar rotas do React Router
+  //    (substituí 'href' por 'to' e usei caminhos de rota em vez de hashes)
   const navLinks = [
-    { label: "Início", href: "#inicio" },
-    { label: "Projetos", href: "#projetos" },
-    { label: "Sobre", href: "#sobre" },
-    { label: "Contato", href: "#contato" },
+    { label: "Início", to: "/" },
+    { label: "Projetos", to: "/projetos" },
+    { label: "Sobre", to: "/sobre" },
+    { label: "Contato", to: "/contato" },
   ];
 
   return (
@@ -54,12 +57,10 @@ export function NavigationMenuComponent() {
                     {navLinks.map((link, index) => (
                         <React.Fragment key={link.label}>
                             <NavigationMenuItem>
-                                {/* O NavigationMenuTrigger do Radix geralmente lida com dropdowns.
-                                    Para links simples, você pode usar uma <a>tag ou <Link> do React Router.
-                                    Vou manter o Trigger para o exemplo, mas adicionei a href: */}
-                                <a href={link.href} className="hover:text-amber-300">
+                                {/* 3. MODIFICADO: Usando <Link> do React Router em vez de <a> */}
+                                <Link to={link.to} className="hover:text-amber-300">
                                     {link.label}
-                                </a>
+                                </Link>
                             </NavigationMenuItem>
                             {/* Adiciona o separador "|" apenas entre os items */}
                             {index < navLinks.length - 1 && (
@@ -83,13 +84,14 @@ export function NavigationMenuComponent() {
                 <NavigationMenuList className="flex flex-col w-full text-white p-4">
                     {navLinks.map((link) => (
                         <NavigationMenuItem key={link.label} className="w-full">
-                            <a 
-                                href={link.href} 
-                                onClick={toggleMenu} // Fecha o menu ao clicar
+                            {/* 4. MODIFICADO: Usando <Link> do React Router também no menu móvel */}
+                            <Link 
+                                to={link.to} 
+                                onClick={toggleMenu} // Mantém o fechamento do menu ao clicar
                                 className="block py-3 px-2 border-b border-slate-700 hover:bg-slate-800 transition-colors w-full"
                             >
                                 {link.label}
-                            </a>
+                            </Link>
                         </NavigationMenuItem>
                     ))}
                 </NavigationMenuList>
