@@ -5,7 +5,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "../ui/button";
-import image from "/src/assets/gemini.png";
+import image from "/src/assets/banner.png";
 
 // 1. Importe o 'Link'
 import { Link } from "react-router-dom";
@@ -60,9 +60,9 @@ export function Banner() {
       </div>
 
       <div className="mt-65">
-        <Card className="max-h-80 bg-slate-800">
+        <Card className="max-h-85 p-0 bg-slate-800">
           <img
-            className="object-cover max-h-40"
+            className="object-cover max-h-85 p-0 w-full"
             src={image}
             alt=""
           />

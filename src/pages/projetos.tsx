@@ -2,7 +2,6 @@ import {
   Card,
   CardAction,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -13,31 +12,31 @@ const Projetos = () => {
   const dataProjetos = [
     {
       title: "gerador de currículo",
-      description: "lorem ipsum dolor sit amet",
+      image: "/src/assets/gerador-curriculo.png",
       deploy: "#",
       repositorio: "#",
     },
     {
-      title: "Projeto 2",
-      description: "Descrição do Projeto 2",
+      title: "Litera",
+      image: "/src/assets/litera.jpeg",
       deploy: "#",
       repositorio: "#",
     },
     {
-      title: "Projeto 3",
-      description: "Descrição do Projeto 3",
+      title: "roadmap de estudos",
+      image: "/src/assets/roadmap.jpeg",
       deploy: "github.com",
       repositorio: "#",
     },
     {
       title: "Projeto 3",
-      description: "Descrição do Projeto 3",
+      image: "Descrição do Projeto 3",
       deploy: "github.com",
       repositorio: "#",
     },
     {
       title: "Projeto 3",
-      description: "Descrição do Projeto 3",
+      image: "/src/assets/projeto3.png",
       deploy: "github.com",
       repositorio: "#",
     },
@@ -50,13 +49,13 @@ const Projetos = () => {
         {dataProjetos.map((p) => (
           <Card
             key={p.title}
-            className="p-4 min-h-45 gap-0 flex justify-between"
+            className="p-4 min-h-45 gap-0 flex justify-between text-center"
           >
             <CardHeader>
               <CardTitle>{p.title}</CardTitle>
             </CardHeader>
-            <CardContent className="gap-2">
-              <CardDescription>{p.description}</CardDescription>
+            <CardContent className="px-3 gap-2 min-h-20 ">
+              <img src={p.image} className="object-cover h-5/7 rounded p-0 w-full mt-2" alt="" />
             </CardContent>
             <CardFooter>
               <CardAction>
