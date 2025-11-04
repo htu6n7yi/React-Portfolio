@@ -3,6 +3,7 @@ import { NavigationMenuComponent } from "./components/banner/nav";
 import { CarouselSpacing } from "./components/banner/carousel";
 import Projetos from "./pages/projetos";
 import { Route, Routes } from "react-router-dom";
+import Sobre from "./pages/sobre";
 
 function App() {
 
@@ -12,11 +13,9 @@ function App() {
       <NavigationMenuComponent />
       <main className="">
        <Routes>
-          {/* Rota 1: A "homepage" (URL: /) vai renderizar o Banner */}
           <Route path="/" element={<Banner />} />
-
-          {/* Rota 2: A URL /projetos vai renderizar a página de Projetos */}
           <Route path="/projetos" element={<Projetos />} />
+          <Route path="/sobre" element={<Sobre />} />
         </Routes>
       </main>
       <CarouselSpacing />
