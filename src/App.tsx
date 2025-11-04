@@ -4,6 +4,7 @@ import { CarouselSpacing } from "./components/banner/carousel";
 import Projetos from "./pages/projetos";
 import { Route, Routes } from "react-router-dom";
 import Sobre from "./pages/sobre";
+import Contato from "./pages/conatato";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Banner />} />
           <Route path="/projetos" element={<Projetos />} />
           <Route path="/sobre" element={<Sobre />} />
+          <Route path="/contato" element={<Contato />} />
         </Routes>
       </main>
       <CarouselSpacing />
