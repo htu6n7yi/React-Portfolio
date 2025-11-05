@@ -16,32 +16,20 @@ const Projetos = () => {
     {
       title: "gerador de currículo",
       image: gerador,
-      deploy: "#",
-      repositorio: "#",
+      deploy: "https://projeto-8-gerador-curriculo.vercel.app/",
+      repositorio: "https://github.com/htu6n7yi/projeto-8-gerador-curriculo/tree/main",
     },
     {
       title: "Litera",
       image: litera,
-      deploy: "#",
-      repositorio: "#",
+      deploy: "https://litera-six.vercel.app/",
+      repositorio: "https://github.com/htu6n7yi/litera",
     },
     {
       title: "roadmap de estudos",
       image: roadmap,
-      deploy: "github.com",
-      repositorio: "#",
-    },
-    {
-      title: "Projeto 3",
-      image: "Descrição do Projeto 3",
-      deploy: "github.com",
-      repositorio: "#",
-    },
-    {
-      title: "Projeto 3",
-      image: "/src/assets/projeto3.png",
-      deploy: "github.com",
-      repositorio: "#",
+      deploy: "https://projeto-7-green.vercel.app/",
+      repositorio: "https://github.com/htu6n7yi/projeto-7/tree/main",
     },
   ];
 
@@ -61,11 +49,13 @@ const Projetos = () => {
               <img src={p.image} className="object-cover h-5/7 rounded p-0 w-full mt-2" alt="" />
             </CardContent>
             <CardFooter>
-              <CardAction>
-                <a href={p.deploy} className="flex flex-row gap-2">
+              <CardAction className="flex flex-row gap-2">
+                <a href={p.repositorio}>
                   <SiGithub size={35} className="border-b border-r rounded border-blue-400 p-1"/> 
-                  <SiRocket size={35} className="border-b border-r rounded border-blue-400 p-1" />
                 </a>
+                <a href={p.deploy}>
+                  <SiRocket size={35} className="border-b border-r rounded border-blue-400 p-1" />
+                  </a>
               </CardAction>
             </CardFooter>
           </Card>
