@@ -7,24 +7,27 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { SiGithub, SiRocket } from "react-icons/si";
+import gerador from "../assets/gerador-curriculo.png";
+import litera from "../assets/litera.jpeg";
+import roadmap from "../assets/roadmap.jpeg";
 
 const Projetos = () => {
   const dataProjetos = [
     {
       title: "gerador de currículo",
-      image: "/src/assets/gerador-curriculo.png",
+      image: gerador,
       deploy: "#",
       repositorio: "#",
     },
     {
       title: "Litera",
-      image: "/src/assets/litera.jpeg",
+      image: litera,
       deploy: "#",
       repositorio: "#",
     },
     {
       title: "roadmap de estudos",
-      image: "/src/assets/roadmap.jpeg",
+      image: roadmap,
       deploy: "github.com",
       repositorio: "#",
     },
