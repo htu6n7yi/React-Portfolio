@@ -48,11 +48,11 @@ const Projetos = () => {
   return (
     <div>
       <h1 className="text-amber-50 text-4xl p-4">Projetos</h1>
-      <div className="p-2 gap-4 grid grid-cols-2 ">
+      <div className="p-2 gap-4 grid grid-cols-2">
         {dataProjetos.map((p) => (
           <Card
             key={p.title}
-            className="p-4 min-h-45 gap-0 flex justify-between text-center"
+            className="p-4 min-h-45 gap-0 flex justify-between text-center shadow-blue-400 "
           >
             <CardHeader>
               <CardTitle>{p.title}</CardTitle>
