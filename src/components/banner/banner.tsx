@@ -18,10 +18,10 @@ import { Link } from "react-router-dom";
 
 export function Banner() {
   return (
-    <div className="p-4 text-amber-100 flex flex-col ">
+    <div className="p-4 text-amber-100 flex flex-col lg:flex-row lg:justify-evenly">
       <div className="mt-4">
-        <Card className="bg-transparent shadow-transparent ">
-          <CardHeader>
+        <Card className="bg-transparent shadow-transparent">
+          <CardHeader className="lg:min-w-lg">
             <CardDescription className="text-4xl text-slate-400">
               {" "}
               Seja Bem-Vindo ao meu Portfólio{" "}
@@ -33,8 +33,8 @@ export function Banner() {
               Desenvolvedor de Software
             </CardDescription>
 
-            <div className="grid grid-cols-4 lg:grid-cols-6 gap-3">
-              <Link to="/sobre" className="col-span-2 lg:col-span-1 text-right ">
+            <div className="grid grid-cols-4 lg:grid-cols-6 gap-3 lg:gap-4">
+              <Link to="/sobre" className="col-span-2 text-right ">
                 <Button
                   className="mt-4 inline-flex bg-slate-500/20 hover:bg-slate-700/20 border-slate-600
            border border-blue-600
@@ -45,7 +45,7 @@ export function Banner() {
               </Link>
 
               {/* 3. Envolva seu botão com o <Link> */}
-              <Link to="/projetos" className="col-span-2 lg:col-span-1 text-left">
+              <Link to="/projetos" className="col-span-2 text-left">
                 <Button
                   variant={"default"}
                   className="mt-4 w-4/6 bg-slate-500/20 hover:bg-slate-700/20 
@@ -61,7 +61,7 @@ export function Banner() {
         </Card>
       </div>
 
-      <div className="mt-65">
+      <div className="mt-65 lg:mt-0">
         <Card className="max-h-85 p-0 bg-slate-800">
           <img
             className="object-cover max-h-85 p-0 w-full"
