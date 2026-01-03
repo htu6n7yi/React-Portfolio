@@ -68,8 +68,8 @@ export function CarouselSpacing() {
                   className="p-3"
                 >
                   <Card className="shadow-sky-600">
-                    <CardContent className="flex flex-col items-center justify-center ">
-                      <IconComponent size={25} color={tech.color} />
+                    <CardContent className="flex flex-col items-center justify-center lg:min-w-[120px] min-w-[80px]">
+                      <IconComponent size={35} color={tech.color} />
                       <span className="text-sm">{tech.name}</span>
                     </CardContent>
                   </Card>
@@ -82,7 +82,7 @@ export function CarouselSpacing() {
         {/* O footer deve ficar fora do CarouselContent */}
         <footer className="mt-4">
           <p className="text-center text-white">
-            © 2025 José Carlos Cavalcanti
+            © 202 José Carlos Cavalcanti
           </p>
         </footer>
       </Carousel>
