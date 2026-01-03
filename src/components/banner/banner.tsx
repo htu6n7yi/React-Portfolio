@@ -33,8 +33,8 @@ export function Banner() {
               Desenvolvedor de Software
             </CardDescription>
 
-            <div className="grid grid-cols-4 gap-3">
-              <Link to="/sobre" className="col-span-2 text-right">
+            <div className="grid grid-cols-4 lg:grid-cols-6 gap-3">
+              <Link to="/sobre" className="col-span-2 lg:col-span-1 text-right ">
                 <Button
                   className="mt-4 inline-flex bg-slate-500/20 hover:bg-slate-700/20 border-slate-600
            border border-blue-600
@@ -45,7 +45,7 @@ export function Banner() {
               </Link>
 
               {/* 3. Envolva seu botão com o <Link> */}
-              <Link to="/projetos" className="col-span-2 text-left">
+              <Link to="/projetos" className="col-span-2 lg:col-span-1 text-left">
                 <Button
                   variant={"default"}
                   className="mt-4 w-4/6 bg-slate-500/20 hover:bg-slate-700/20 
