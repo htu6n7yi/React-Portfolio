@@ -1,9 +1,4 @@
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+
 import { Button } from "../ui/button";
 import image from "/src/assets/banner.png";
 import bgImage from "@/assets/litera.jpeg";
